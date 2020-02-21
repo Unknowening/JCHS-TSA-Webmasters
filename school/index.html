@@ -15,9 +15,40 @@
     <body>
         
      
-        <header>
-            <h1>TSA</h1>
+        <header class="main-header">
+            <a href="/" class ="jchs-logo">
+                <img src="images/school-logo.jpg" alt="logo">
+                <div class="jchs-logo-text">Webmasters</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="design/index.html">Design Brief</a></li>
+                    <li><a href="chapter/index.html">TSA Chapter</a></li>
+                    <li><a href="school/index.html">CTE Program</a></li>
+                </ul>                
+            </nav>
         </header>
+
+
+
+        <script>
+            // On Scroll
+            $(window).scroll(function(){
+                // If we have scrolled more than 10px
+                if($(document).scrollTop() > 10){
+                    // Add class "fixed" to header element
+                    $('header').addClass('fixed');
+                // Otherwise
+                }else{
+                    // If header already has "fixed" class
+                    if($('header').hasClass('fixed')){
+                        // Remove said class
+                        $('header').removeClass('fixed');
+                   }
+                }
+            });
+
+        </script>
 
         <h1>Computer and Technical Education</h1>
 
