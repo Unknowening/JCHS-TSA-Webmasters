@@ -115,7 +115,6 @@ p.small{
     line-height: 0.8;
    }
         
-<style>
 .dropdown {
      position: relative;
      display: inline-block;
@@ -134,11 +133,3 @@ p.small{
 .dropdown:hover .dropdown-content {
      display: block;
       }
-</style>
-
-<div class="dropdown">
-     <span>Mouse over me</span>
-        <div class="dropdown-content">
-            <p>Hello World!</p>
-        </div>
-</div>
