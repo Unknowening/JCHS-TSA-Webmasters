@@ -5,17 +5,21 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #ffffff;
+    background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
-    color: black;
+    color: white;
 }
 
 .jchs-logo{
     display: flex;
     align-items: center;
-    font-size: 3em;
-    color: black;
+    font-size: 2em;
+    color: white;
+}
+
+.jchs-logo:hover{
+    color: gray;
     text-decoration: none;
 }
 
@@ -23,7 +27,9 @@ body{
     margin-left: 1rem;
 }
 
-
+.jchs-logo img{
+    height: 70px;
+}
 
 .main-nav ul {
     display: flex;
@@ -33,21 +39,22 @@ body{
 }
 
 .main-nav a{
-    color: black;
+    color: white;
     text-decoration: none;
-    padding: 3em;
-    font-size: 2em;
+    padding: 2em;
+    font-size: 1.5em;
 }
 
 .main-nav a:hover {
-    color: #8b0000;
+    color: gray;
 }
 
 .main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
+    height: 75px;
+    background-color: #580000;
 }
 
 * {
@@ -59,13 +66,17 @@ body{
     height: 100%;
 }
 .center-fit {
-    max-width: 100%;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
     margin: auto;
 }
 
-.link{
-    display: grid;
-    height: 400px;
+.center {
+    max-height: 1000px;
+    object-fit: cover;
+    width: 100%;
+    margin: auto;
 }
 
 .banner{
@@ -76,6 +87,14 @@ body{
 }
 
 .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5em;
+    transform: translate(-50%, -50%);
+}
+
+.head-title{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,21 +110,46 @@ body{
     flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
-    background-color: #ffffff;
+    height: 75px;
+    background-color: #580000;
     width: 100%;
     
 } 
 
+.main-info{
+    color: black;
+    text-align: center;
+    margin: 10em;
+}
+
+.main-info h1{
+    margin-bottom: .1rem;
+}
+
+.paragraph-text{
+    margin-left: 25em;
+    margin-right: 25em;
+    margin-top: 2em;
+    margin-bottom: 10em;
+    color: black;
+}
+
 .main-footer{
     display: flex;
     align-items: center;
-    font-size: 3em;
-    color: black;
-    text-decoration: none;
-    height: 140px;
+    font-size: 1.5em;
+    color: white;
+    height: 75px;
     width: 100%;
+    justify-content: center;
+    margin: auto;
+    background-color: #3f0000;
 }
+
+.footer-text{
+    display: inline-block;
+}
+
 p {
     text-indent: 50px;
     font-size: 18px;
