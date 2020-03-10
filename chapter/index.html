@@ -14,20 +14,51 @@
 
     <body>
         <header class="main-header">
-            <a href="index.html" class ="jchs-logo">
-                <img src="../images/tsa-logo.png" alt="logo">
+            <a href="/" class ="jchs-logo">
+                <img src="../images/school-logo.png" alt="logo">
+                <div class="jchs-logo-text">Webmasters</div>
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="design/index.html">Design Brief</a></li>
-                    <li><a href="chapter/index.html">TSA Chapter</a></li>
-                    <li><a href="school/index.html">CTE Program</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activites</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="competitions.html">Competitions</a></li>
+                    <li><a href="officers.html">Officers</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <div class="icon" onclick="openNav(this)">
+                            <div class="ham1"></div>
+                            <div class="ham2"></div>
+                            <div class="ham3"></div>
+                        </div>
+                    </li>
                 </ul>
                 
             </nav>
         </header>
 
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../design/index.html">Design Brief</a>
+            <a href="../chapter/index.html">TSA Chapter</a>
+            <a href="../school/index.html">CTE Program</a>
+          </div>
+
         <script>
+
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginRight = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginRight = "0";
+            }
+
             // On Scroll
             $(window).scroll(function(){
                 // If we have scrolled more than 10px
@@ -45,18 +76,61 @@
             });
         </script>
 
-        <h1>JCHS TSA Chapter</h1>
-        <h1>What is TSA?</h1>
-        <p>TSA is a national, non-profit organization of high school and middle school student members who are engaged in STEM. Since TSA was chartered in 1978, almost 4,000,000 members have participated through competitions, intracurricular activities, leadership opportunities, and community service.
-            The Technology Student Association (TSA) enhances personal development, leadership, and career opportunities in STEM, whereby members apply and integrate these concepts through intracurricular activities, competitions, and related programs.
-        </p>
-        <h1>Motto</h1>
-        <p>Learning to lead in a technical world.</p>
+        <div class="banner">
+            <div class="headbox">
+                <img class="center" src="../images/school-image.jpg" alt="JCHS">
+                <div  class="head-title">TSA</div>
+            </div>
+        </div>
 
-        <h1>Creed</h1>
+        <div class="main-info">
+            <h1>What is TSA?</h1>
+            <img src="../images/line.jpg" alt="line">
+            <p class="paragraph-text">TSA is a national, non-profit organization of high school and middle school student members who are engaged in STEM. Since TSA was chartered in 1978, almost 4,000,000 members have participated through competitions, intracurricular activities, leadership opportunities, and community service.
+                The Technology Student Association (TSA) enhances personal development, leadership, and career opportunities in STEM, whereby members apply and integrate these concepts through intracurricular activities, competitions, and related programs.
+            </p>
+        </div>
 
-        <p>I believe that Technology Education holds an important place in my life in the technical world. I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry. Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live. I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living. I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability. I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
-        </p>
+        <div class="main-info">
+            <h1>Motto</h1>
+            <img src="../images/line.jpg" alt="line">
+            <p class="paragraph-text">Learning to lead in a technical world.
+            </p>
+        </div>
+
+        <div class="main-info">
+            <h1>Creed</h1>
+            <img src="../images/line.jpg" alt="line">
+            <p class="paragraph-text">I believe that Technology Education holds an important place in my life in the technical world. I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry. Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live. I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living. I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability. I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
+            </p>
+        </div>
+        
+        <a href="chapter/index.html">
+            <div class="banner">
+                <div class="imgbox">
+                    <img class="center-fit" src="images/schenk-lab.jpg" alt="JCHS">
+                    <div  class="title">TSA Chapter</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="school/index.html">
+            <div class="banner">
+                <div class="imgbox">
+                    <img class="center-fit" src="images/CTE.jpg" alt="JCHS">
+                    <div  class="title">CTE Program</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design/index.html">
+            <div class="banner">
+                <div class="imgbox">
+                    <img class="center-fit" src="images/electriccar.jpg" alt="JCHS">
+                    <div  class="title">Design Brief</div>
+                </div>
+            </div>
+        </a>
 
         <h1>Competitions</h1>
         <h1>Awards</h1>
@@ -64,7 +138,7 @@
         <h1>Officers</h1>
         <h1>Activities</h1>
 
-        <footer>Johns Creek High School 2020 Webmasters Team</footer>
+        <footer class="main-footer">Johns Creek High School 2020 Webmasters Team</footer>
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
