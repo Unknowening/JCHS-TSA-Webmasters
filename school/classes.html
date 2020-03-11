@@ -6,126 +6,397 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Classes</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        
     </head>
 
     <body>
-        <header>
-            <h1>Computer and Technical Education</h1>
+        
+     
+        <header class="main-header">
+            <a href="/" class ="jchs-logo">
+                <img src="../images/school-logo.png" alt="logo">
+                <div class="jchs-logo-text">Webmasters</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="teachers.html">Teachers</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <div class="icon" onclick="openNav(this)">
+                            <div class="ham1"></div>
+                            <div class="ham2"></div>
+                            <div class="ham3"></div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </nav>
         </header>
 
-        
-        <h1>Computer Science</h1>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../design/index.html">Design Brief</a>
+            <a href="../chapter/index.html">TSA Chapter</a>
+            <a href="../school/index.html">CTE Program</a>
 
-        <h2>Introduction to Computer Science</h2>
-        
-        <p> This course is the foundation for Web & Digital Communications, Programming, Information Support and Services, and Network Systems pathways. This course is designed for high school students to under- stand, communicate, and adapt to a digital world as it impacts their personal life, society, and the busi- ness world. Exposure to foundational knowledge in hardware, software, programming, web design, IT support, and networks are all taught in a computer lab with hands-on activities and project focused tasks. Students will not only understand the concepts, but apply their knowledge to situations and de- fend their actions/decisions/choices through the knowledge and skills acquired in this course. Employa- bility skills are integrated into activities, tasks, and projects throughout the course standards to demon- strate the skills required by business and industry. Competencies in the co-curricular student organiza- tions, Future Business Leaders of America FBLA are integral components of both the employability skills standards and content standards for this course. Various forms of technologies will be highlighted to ex- pose students to the emerging problem-solving, ethical and legal issues, and the impact of effective presentation skills are taught in this course as a foundational knowledge to prepare students to be col- lege and career ready. The knowledge and skills taught in this course build upon each other to form a comprehensive introduction to the digital world.</p>
-        
-        <h2>Computer Science Principles</h2>
-        
-        <p> This year long course is designed to be the equivalent of a one semester long college introductory course in computer science. We use the Harvard CS50 AP curriculum for this course, in preparation for the College Board’s Advance Placement Exam. There are two in-course submissions that make up part of each student’s AP Exam grade. Major emphasis is on programming using the languages C and Python, in programming methodology to develop algorithmic thinking. Prerequisite: Completed Alge- bra II with a B or better and Introduction to Digital Technology.</p>
+          </div>
 
-        <h2>Computer Science A</h2>
-        
-        <p> This year long course is designed to be the equivalent of a one semester long college introductory course in programming. The course is geared toward preparing students to take the College Board’s Ad- vance Placement Exam. Major emphasis is on programming using the language JAVA, in programming methodology and problem solving. Prerequisite: Completed Algebra II with a B or better. Note: This course will count for the fourth year of science for the classes of 2012 and after.</p>
+        <script>
 
-        <h2>Embedded Programming</h2>
-        
-        <p> </p>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginRight = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
 
-   
-        
-        <h1>Audio/Video Tech and Film</h1>
-        
-        <h2>Audio Visual Tech 1</h2>
-        
-        <p> This course provides an introductory overview of television production with an emphasis on the role of the television production team. Students are instructed on the correct operation of studio and field pro- duction equipment as well as the history of television, scriptwriting, news reporting, safety and post- production editing. This yearlong course will provide the basic knowledge required to progress on to the advanced levels of the program. Extracurricular productions are a requirement of this program.</p>
-        
-        <h2>Audio Visual Tech 2</h2>
-        
-        <p> Students complete advanced editing projects and work as crewmembers on the in-studio and field pro- duction to reinforce the television production process. Participants serve as reporters and producers on segments of John Creek's television program. Students will work with computer-based editing and ad- vanced graphics as part of the course. Leadership opportunities afford themselves to students as pro- ducers of various departmental productions.</p>
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginRight = "0";
+            }
 
-        <h2>Audio Visual Tech 3</h2>
-        
-        <p> This third-year course provides students the opportunity to complete advanced editing projects and di- rect student production groups. Participants learn advanced editing techniques for use with both in and out of school productions. Students will be using nonlinear editing equipment as well as graphics and compositing software for their productions. Extracurricular productions are a requirement of this pro- gram. Prerequisite: Successful completion of Audio/Video Tech & Film II and teacher recommenda- tion.</p>
+            // On Scroll
+            $(window).scroll(function(){
+                // If we have scrolled more than 10px
+                if($(document).scrollTop() > 10){
+                    // Add class "fixed" to header element
+                    $('header').addClass('fixed');
+                // Otherwise
+                }else{
+                    // If header already has "fixed" class
+                    if($('header').hasClass('fixed')){
+                        // Remove said class
+                        $('header').removeClass('fixed');
+                    }
+                }
+            });
+        </script>
 
-        <h2>Broadcast/Video Applications</h2>
-        
-        <p> Students in Broadcast/Video Applications will serve as producers for many of the videos created in the program. Fourth year students will specialize in areas of production that they may pursue in post- secondary education. During the course, students may work on portfolios for career or educational ad- vancement. Extracurricular participation is a mandatory part of the program. Prerequisite: Successful completion of Audio/Video Tech & Film III and teacher recommendation.</p>
-        
-        <h2>Introduction to Digital Media</h2>
-        
-        <p> Students will learn the basic components of 2-D and 3-D animation development from storyboarding ele- ments to fundamental software capabilities. The course serves as an introduction to animation history, keyboarding shortcuts, project filing, and career awareness. Instruction in this course focuses on basic drawing and software training, storyboard creation, the physics and anatomy of motion, technology of animation, properties and use of color, cameras and lighting, fundamentals of modeling and animating, creating a portfolio and file management. Students will work productively and responsibly in individual
-and collaborative settings. This introductory pathway course of three sequenced courses will give stu- dents the opportunity to earn an industry credential in animation. No prerequisite for this course.</p>
-        
-        <h2>Principles and Concepts of Animation</h2>
-        
-        <p> Students will continue to develop and implement aesthetics of color selection, storyboarding in 2-D digi- tal animation, and develop animatic creations from 2-D to 3-D. Students in this course will learn interface tools, the use of drawing tools, animating the camera, importing images, working with sound and lip syncing, understanding paths and motion design, and frame by frame animation creation relative to se- quence planning and pacing. This course will allow students to explore more advanced aspects of charac- ter animation including subtle character gesture and advanced action timing with emphasis on personal observation. This course will allow students to build on previously learned storyboarding skills, develop scripts, determine character motivations, consider setting and motion variables, and learn other unique traits of animation through integrated activities. Prerequisite(s): Introduction to Digital Media</p>
+        <div class="banner">
+            <div class="headbox">
+                <img class="center-fit" src="../images/school-image.jpg" alt="JCHS">
+                <div  class="head-title">Classes</div>
+            </div>
+        </div>
 
-        <h2>Advanced Animation</h2>
+        <div class="main-info">
+            <h1>Computer Science</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        INTRODUCTION TO DIGITAL TECHNOLOGY
+
+                    </h1>
+                    <p>
+                        This course is the foundation for Web & Digital Communications, Programming, Information Support and Services, and Network Systems pathways. This course is designed for high school students to understand, communicate, and adapt to a digital world as it impacts their personal life, society, and the business world. Exposure to foundational knowledge in hardware, software, programming, web design, IT support, and networks are all taught in a computer lab with hands-on activities and project focused tasks. Students will not only understand the concepts, but apply their knowledge to situations and defend their actions/decisions/choices through the knowledge and skills acquired in this course. Employability skills are integrated into activities, tasks, and projects throughout the course standards to demonstrate the skills required by business and industry. Competencies in the co-curricular student organizations, Future Business Leaders of America FBLA are integral components of both the employability skills standards and content standards for this course. Various forms of technologies will be highlighted to expose students to the emerging problem-solving, ethical and legal issues, and the impact of effective presentation skills are taught in this course as a foundational knowledge to prepare students to be college and career ready. The knowledge and skills taught in this course build upon each other to form a comprehensive introduction to the digital world.
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        ADVANCED PLACEMENT COMPUTER SCIENCE PRINCIPLES
+
+                    </h1>
+                    <p>
+                        This year long course is designed to be the equivalent of a one semester long college introductory course in computer science. We use the Harvard CS50 AP curriculum for this course, in preparation for the College Board’s Advance Placement Exam. There are two in-course submissions that make up part of each student’s AP Exam grade. Major emphasis is on programming using the languages C and Python, in programming methodology to develop algorithmic thinking. Prerequisite: Completed Algebra II with a B or better and Introduction to Digital Technology.
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        ADVANCED PLACEMENT COMPUTER SCIENCE A
+
+                    </h1>
+                    <p>
+                        This year long course is designed to be the equivalent of a one semester long college introductory course in programming. The course is geared toward preparing students to take the College Board’s Advance Placement Exam. Major emphasis is on programming using the language JAVA, in programming methodology and problem solving. Prerequisite: Completed Algebra II with a B or better. Note: This course will count for the fourth year of science for the classes of 2012 and after.
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        EMBEDDED PROGRAMMING
+                    </h1>
+                    <p>
+                        n/a
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-info">
+            <h1>Audio/Video Tech and Film</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        AUDIO/VIDEO TECH & FILM I
+                    </h1>
+                    <p>
+                        This course provides an introductory overview of television production with an emphasis on the role of the television production team. Students are instructed on the correct operation of studio and field production equipment as well as the history of television, scriptwriting, news reporting, safety and post production editing. This yearlong course will provide the basic knowledge required to progress on to the advanced levels of the program. Extracurricular productions are a requirement of this program.
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        AUDIO/VIDEO TECH & FILM II
+
+                    </h1>
+                    <p>
+                        Students complete advanced editing projects and work as crewmembers on the in-studio and field production to reinforce the television production process. Participants serve as reporters and producers on segments of John Creek's television program. Students will work with computer-based editing and advanced graphics as part of the course. Leadership opportunities afford themselves to students as producers of various departmental productions. Extracurricular productions are a requirement of this program. Prerequisite: Successful completion of Audio/Video Tech & Film I and teacher recommendation.
+
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        AUDIO/VIDEO TECH & FILM III
+
+                    </h1>
+                    <p>
+                        This third-year course provides students the opportunity to complete advanced editing projects and direct student production groups. Participants learn advanced editing techniques for use with both in and out of school productions. Students will be using nonlinear editing equipment as well as graphics and compositing software for their productions. Extracurricular productions are a requirement of this program. Prerequisite: Successful completion of Audio/Video Tech & Film II and teacher recommendation.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        BROADCAST/VIDEO APPLICATIONS
+
+                    </h1>
+                    <p>
+                        Students in Broadcast/Video Applications will serve as producers for many of the videos created in the program. Fourth year students will specialize in areas of production that they may pursue in post- secondary education. During the course, students may work on portfolios for career or educational advancement. Extracurricular participation is a mandatory part of the program. Prerequisite: Successful completion of Audio/Video Tech & Film III and teacher recommendation.
+
+                    </p>
+                </div>
+            </div>
+        </div> 
         
-        <p> In this course students will continue working in 2-D and 3-D environments by importing 3- D models while working in 3-D space morphing, and inverse kinematics. Students will acquire knowledge of human and animal animations, apply the aesthetic and technical aspects of animation of characters, and analyze the physics and physicalization of action, weight, and timing. The course advances students’ knowledge of sound integration into animated products; by focusing on skills that include lip-syncing, voice overs, and synchronization. Portfolio development will include animation reels and other products. Students will learn the processes of post-production and will work both independently and in small production teams to manage the production pipeline for a 3-D project. In the final phases of the project completion, students will work collaboratively to meet deadlines and will be expected to produce an animated final project that reflects competency with editing, rendering, updating reel, and self-promotional support items. Students may also develop a working game or app or animated video as a final project. Through the exploration of projects, students will continue to work independently and collaboratively to develop content delivery, story and technical mastery. Prerequisite: Principles and Concepts of Animation.</p>
+        <div class="main-info">
+            <h1>Design</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        INTRODUCTION TO DIGITAL MEDIA
+
+                    </h1>
+                    <p>
+                        Students will learn the basic components of 2-D and 3-D animation development from storyboarding elements to fundamental software capabilities. The course serves as an introduction to animation history, keyboarding shortcuts, project filing, and career awareness. Instruction in this course focuses on basic drawing and software training, storyboard creation, the physics and anatomy of motion, technology of animation, properties and use of color, cameras and lighting, fundamentals of modeling and animating, creating a portfolio and file management. Students will work productively and responsibly in individual and collaborative settings. This introductory pathway course of three sequenced courses will give students the opportunity to earn an industry credential in animation. No prerequisite for this course.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        PRINCIPLES AND CONCEPTS OF ANIMATION
+
+                    </h1>
+                    <p>
+                        Students will continue to develop and implement aesthetics of color selection, storyboarding in 2-D digital animation, and develop animatic creations from 2-D to 3-D. Students in this course will learn interface tools, the use of drawing tools, animating the camera, importing images, working with sound and lip syncing, understanding paths and motion design, and frame by frame animation creation relative to sequence planning and pacing. This course will allow students to explore more advanced aspects of character animation including subtle character gesture and advanced action timing with emphasis on personal observation. This course will allow students to build on previously learned storyboarding skills, develop scripts, determine character motivations, consider setting and motion variables, and learn other unique traits of animation through integrated activities. Prerequisite(s): Introduction to Digital Media
+
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        ADVANCED ANIMATION, GAME AND APP DESIGN
+
+                    </h1>
+                    <p>
+                        In this course students will continue working in 2-D and 3-D environments by importing 3- D models while working in 3-D space morphing, and inverse kinematics. Students will acquire knowledge of human and animal animations, apply the aesthetic and technical aspects of animation of characters, and analyze the physics and physicalization of action, weight, and timing. The course advances students’ knowledge of sound integration into animated products; by focusing on skills that include lip-syncing, voice overs, and synchronization. Portfolio development will include animation reels and other products. Students will learn the processes of post-production and will work both independently and in small production teams to manage the production pipeline for a 3-D project. In the final phases of the project completion, students will work collaboratively to meet deadlines and will be expected to produce an animated final project that reflects competency with editing, rendering, updating reel, and self-promotional support items. Students may also develop a working game or app or animated video as a final project. Through the exploration of projects, students will continue to work independently and collaboratively to develop content delivery, story and technical mastery. Prerequisite: Principles and Concepts of Animation.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        
+                    </h1>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="main-info">
+            <h1>Business</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        INTRODUCTION TO BUSINESS AND TECHNOLOGY
+
+                    </h1>
+                    <p>
+                        This course is the foundation for Administrative Support, Small Business Development, and Human Resources Management pathways. The course is designed for high school students as a gateway to the career pathways above, and provides an overview of business and technology skills required for today’s business environment. Knowledge of business principles, the impact of financial decisions, and technology proficiencies demanded by business combine to establish the elements of this course. Emphasis is placed on working in a business environment, managing a business, and owning a business. The intention of this course is to prepare students to be successful both personally and professionally in an information-based society. Students will not only understand the concepts, but apply their knowledge to situation and defend their action/decisions/choices and projects throughout the course standards to demonstrate the skills required by business and industry. Competencies in the co-curricular student organization, Future Business Leaders of America FBLA, are integral components of both the employability skills standards and content standards for this course.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        ENTREPRENEURSHIP
+
+                    </h1>
+                    <p>
+                        Entrepreneurship is a course in the Entrepreneurship pathway. This class focuses on recognizing a business opportunity, starting a business, operating and maintaining a business. Students will be exposed to the development of critical thinking, problem solving, and innovation in this course as they will either be the business owner or individuals working in a competitive job market in the future. Integration of accounting, finance, marketing, business management, legal and economic environments will be developed throughout projects in this course. Engaging students in the creation and management of a business and the challenges of being a small business owner will be fulfilled. Intro to Business and Technology, previously Business Essentials is a prerequisite for this course. Business Law will be taught in alternating years with Entrepreneurship for pathway completion.
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        LEGAL ENVIRONMENT IN BUSINESS
+
+                    </h1>
+                    <p>
+                        Legal Environment of Business addresses statutes and regulations affecting businesses, families, and individuals. All students will benefit with the knowledge of business law as they will eventually assume roles as citizens, workers, and consumers in their communities and in society at large. Students will get an overview of business law while concentrating on the legal aspects of business ownership and management. Legal issues addressed include court procedures, contracts, torts, consumer law, employment law, environmental law, international law, ethics, and the role of the government in business. Students will not only understand the concepts, but will also apply their knowledge to situations and defend their actions, decisions, and choices.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        
+                    </h1>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div> 
+
+        <div class="main-info">
+            <h1>Marketing</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        MARKETING PRINCIPLES
+
+                    </h1>
+                    <p>
+                        Marketing prepares students for future courses and careers in marketing, merchandising, and management. Emphasis is placed on selling, promotion, advertising, distribution, merchandising, and the marketing functions. Student activities include participation in group and individual projects, case studies, role-plays, school-based enterprises, and presentations. DECA, the co-curricular association of marketing students, provides supportive training in marketing occupational areas and leadership development opportunities. Students may select this course without being enrolled in the Marketing Internship program.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        INTRODUCTION TO SPORTS AND ENTERTAINMENT MARKETING
+
+                    </h1>
+                    <p>
+                        This course introduces the student to the major segments of the Sports and Entertainment Industry and the social and economic impact it has on the local, state, national, and global economies. The products and services offered to consumers and the impact of marketing on these products and services are examined. Units include: Business Fundamentals, Product Mix, Product Knowledge, Product/Service Management, Business Regulations, Interpersonal Skills, Selling, Marketing-Information Management, Economics, Distribution, Pricing, Advertising, Publicity/Public Relations, Sales Promotion, Business Risks, and Organization. Prerequisite: Marketing Principles.
+
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        ADVANCED SPORTS AND ENTERTAINMENT MARKETING
+
+                    </h1>
+                    <p>
+                        This course provides students opportunities to develop managerial and analytical skills and deepen their knowledge in sports/entertainment marketing. Topical units include: Marketing-Information Management, Selling, Publicity/Public Relations, Sales Promotion, Management of Promotion, Product Mix, Pricing, Positioning, and Marketing Planning. Project -based instruction, together with a variety of work-based learning activities, should be incorporated in this course to provide real-world application. Prerequisite: Introduction to Sports & Entertainment Marketing
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        HOSPITALITY RECREATION AND TOURISM ESSENTIALS
+
+                    </h1>
+                    <p>
+                        This class provides students an introduction into all the segments of the Hospitality industry. Students will explore hotels, restaurants and tourism among other elements through projects, research and presentations. Students will experience real life scenarios as well as guest speakers and field trips to help students learn and understand the material.
+
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        HOSPITALITY RECREATION AND TOURISM MANAGEMENT
+
+                    </h1>
+                    <p>
+                        Hospitality Recreation and Tourism Management is the final course in the Hospitality Marketing pathway. The course focuses on the management practices used in the hospitality industry. Career development is focused on in this class. Students are able to learn management practices that focus on ethics, human resources and profit and loss statements that help run the hospitality industry in each of the segments. These lessons are taught through projects, presentations, research and discussions. Students will have access to hospitality operations first hand through field trips and guest speakers who are industry professionals.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        
+                    </h1>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div> 
+
+        <div class="main-info">
+            <h1>Engineering</h1>
+            <img src="../images/line.jpg" alt="line">
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        FOUNDATIONS OF ENGINEERING AND TECHNOLOGY
+
+                    </h1>
+                    <p>
+                        JCHS has a state-of-the-art lab utilizing industry standard equipment to learn the basics of engineering practices. During the year, individual work, group work and engineering training modules will be used as students explore basic engineering practices used in industry. Companies will be formed and students will use skills learned in the trainers to design and build projects. During the projects, a corporate structure is used as well as, teamwork, company logo, a video, brochure, web page, Power Point presentation, and company t-shirts will be made along with a fully functioning prototype of the product. Students will learn how to safely use equipment from basic hand and power tools to industrial robots and computer controlled milling machines. Foundations of Engineering Technology is the first course of a possible four-year track in Engineering.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        ENGINEERING CONCEPTS
+
+                    </h1>
+                    <p>
+                        A more in-depth study of various engineering practices will take place in Engineering Concepts. As more advanced engineering skills are learned, students take on many of the challenges faced in real life engineering careers. Some design projects in Engineering Concepts include: Hovercrafts, Solar Fuel Cell Vehicles, Ergonomic Workstations, and Handicap Lifting Devices. Prerequisite: Foundations of Engineering Technology.
+
+                    </p>
+                </div>
+            </div>
+            <div class="divider"> 
+                <div class="left">
+                    <h1>
+                        ENGINEERING APPLICATIONS
+
+                    </h1>
+                    <p>
+                        Engineering Applications continues the students’ opportunities to learn about Engineering. This third year class takes the students further into the fields of Engineering. The students continue to use the engineering training stations as well as projects. Example projects in Engineering Applications are: Water Desalination, Hydroponic Gardening, Smart House Security and Automatic Drawbridge. Prerequisite: Engineering Concepts.
+
+                    </p>
+                </div>
+                <div class="right" >
+                    <h1>
+                        RESEARCH, DESIGN AND PROJECT MANAGEMENT
+
+                    </h1>
+                    <p>
+                        This course provides students with the unique opportunity to design and build their own projects. After completing some of the engineering training stations the R&D students will design and build their own master project. During the first three years of this program students have been given projects to complete. In year four ,the students take their gained knowledge to design and build their own projects. Prerequisite: Engineering Applications.
+
+                    </p>
+                </div>
+            </div>
+        </div> 
 
         
-        
-        <h1>Engineering</h1>
-        
-        <h2>Engineering Foundations</h2>
-        
-        <p> JCHS has a state-of-the-art lab utilizing industry standard equipment to learn the basics of engineering practices. During the year, individual work, group work and engineering training modules will be used as students explore basic engineering practices used in industry. Companies will be formed and stu- dents will use skills learned in the trainers to design and build projects. During the projects, a corporate structure is used as well as, teamwork, company logo, a video, brochure, web page, Power Point presentation, and company t-shirts will be made along with a fully functioning prototype of the prod- uct. Students will learn how to safely use equipment from basic hand and power tools to industrial ro- bots and computer controlled milling machines. Foundations of Engineering Technology is the first course of a possible four-year track in Engineering.</p>
-        
-        <h2>Engineering Concepts</h2>
-        
-        <p> A more in-depth study of various engineering practices will take place in Engineering Concepts. As more advanced engineering skills are learned, students take on many of the challenges faced in real life engineering careers. Some design projects in Engineering Concepts include: Hovercrafts, Solar Fuel Cell Vehicles, Ergonomic Workstations, and Handicap Lifting Devices. Prerequisite: Foundations of Engi- neering Technology.</p>
 
-        <h2>Engineering Applications</h2>
-        
-        <p> Engineering Applications continues the students’ opportunities to learn about Engineering. This third year class takes the students further into the fields of Engineering. The students continue to use the engineering training stations as well as projects. Example projects in Engineering Applications are: Wa- ter Desalination, Hydroponic Gardening, Smart House Security and Automatic Drawbridge. Prerequi- site: Engineering Concepts.</p>
+        <footer class="main-footer">Johns Creek High School 2020 Webmasters Team</footer>
 
-        <h2>Engineering Research, Design, and Project Management</h2>
-        
-        <p> This course provides students with the unique opportunity to design and build their own projects. After completing some of the engineering training stations the R&D students will design and build their own master project. During the first three years of this program students have been given projects to com- plete.Inyearfour,thestudentstaketheirgainedknowledgetodesignandbuildtheirownprojects. Pre- requisite: Engineering Applications.
-</p>
-        
-        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <h1>Business</h1>
-        
-        <h2>Introduction to Business</h2>
-        
-        <p> This course is the foundation for Administrative Support, Small Business Development, and Human Re- sources Management pathways. The course is designed for high school students as a gateway to the career pathways above, and provides an overview of business and technology skills required for today’s business environment. Knowledge of business principles, the impact of financial decisions, and technol- ogy proficiencies demanded by business combine to establish the elements of this course. Emphasis is placed on working in a business environment, managing a business, and owning a business. The inten- tion of this course is to prepare students to be successful both personally and professionally in an infor- mation-based society. Students will not only understand the concepts, but apply their knowledge to situation and defend their action/decisions/choices and projects throughout the course standards to demonstrate the skills required by business and industry. Competencies in the co-curricular student organization, Future Business Leaders of America FBLA, are integral components of both the employa- bility skills standards and content standards for this course.</p>
-        
-        <h2>Business Entrepreneur</h2>
-        
-        <p> Entrepreneurship is a course in the Entrepreneurship pathway. This class focuses on recognizing a busi- ness opportunity, starting a business, operating and maintaining a business. Students will be exposed to the development of critical thinking, problem solving, and innovation in this course as they will either be the business owner or individuals working in a competitive job market in the future. Integration of ac- counting, finance, marketing, business management, legal and economic environments will be developed throughout projects in this course. Engaging students in the creation and management of a business and the challenges of being a small business owner will be fulfilled. Intro to Business and Technology, previously Business Essentials is a prerequisite for this course. Business Law will be taught in alternating years with Entrepreneurship for pathway completion.</p>
-
-        <h2>Legal Environment in Business</h2>
-        
-        <p> Legal Environment of Business addresses statutes and regulations affecting businesses, families, and indi- viduals. All students will benefit with the knowledge of business law as they will eventually assume roles as citizens, workers, and consumers in their communities and in society at large. Students will get an over- view of business law while concentrating on the legal aspects of business ownership and management. Legal issues addressed include court procedures, contracts, torts, consumer law, employment law, envi- ronmental law, international law, ethics, and the role of the government in business. Students will not on- ly understand the concepts, but will also apply their knowledge to situations and defend their actions, de- cisions, and choices.</p>
-
-        <h2>Marketing Principles</h2>
-        
-        <p> Marketing prepares students for future courses and careers in marketing, merchandising, and manage- ment. Emphasis is placed on selling, promotion, advertising, distribution, merchandising, and the mar- keting functions. Student activities include participation in group and individual projects, case studies, role-plays, school-based enterprises, and presentations. DECA, the co-curricular association of marketing students, provides supportive training in marketing occupational areas and leadership development op- portunities. Students may select this course without being enrolled in the Marketing Internship program.</p>
-        
-        <h2>Sports and Entertainment Marketing</h2>
-        
-        <p> This course introduces the student to the major segments of the Sports and Entertainment Industry and the social and economic impact it has on the local, state, national, and global economies. The products and services offered to consumers and the impact of marketing on these products and services are exam- ined. Units include: Business Fundamentals, Product Mix, Product Knowledge, Product/Service Manage- ment, Business Regulations, Interpersonal Skills, Selling, Marketing-Information Management, Economics, Distribution, Pricing, Advertising, Publicity/Public Relations, Sales Promotion, Business Risks, and Organi- zation. Prerequisite: Marketing Principles.</p>
-        
-        <h2>Advanced Sports and Entertainment Marketing</h2>
-        
-        <p> This course provides students opportunities to develop managerial and analytical skills and deepen their knowledge in sports/entertainment marketing. Topical units include: Marketing-Information Manage- ment, Selling, Publicity/Public Relations, Sales Promotion, Management of Promotion, Product Mix, Pric- ing, Positioning, and Marketing Planning. Project -based instruction, together with a variety of work-based learning activities, should be incorporated in this course to provide real-world application. Prerequisite: Introduction to Sports & Entertainment Marketing
-</p>
-        
-        <h2>Hospitality Recreation and Tourism Essentials</h2>
-        
-        <p> This class provides students an introduction into all the segments of the Hospitality industry. Students will explore hotels, restaurants and tourism among other elements through projects, research and presenta- tions. Students will experience real life scenarios as well as guest speakers and field trips to help students learn and understand the material.</p>
-
-        <h2>Hospitality Recreation and Tourism Management</h2>
-
-        <p> Hospitality Recreation and Tourism Management is the final course in the Hospitality Marketing path- way. The course focuses on the management practices used in the hospitality industry. Career develop- ment is focused on in this class. Students are able to learn management practices that focus on ethics, human resources and profit and loss statements that help run the hospitality industry in each of the seg- ments. These lessons are taught through projects, presentations, research and discussions. Students will have access to hospitality operations first hand through field trips and guest speakers who are industry professionals.
-</p>
-
-        <footer>Johns Creek High School 2020 Webmasters Team</footer>
 
     </body>
     
 </html>
+  
+

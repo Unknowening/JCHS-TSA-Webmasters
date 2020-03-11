@@ -247,3 +247,39 @@ p.small{
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
 }
+
+.divider{
+    display: flex;
+}
+
+.left{
+    flex: 0 0 50%;
+    margin: 1em;
+}
+
+.left h1{
+    font-size: 25px;
+    margin: 1em;
+}
+
+.left p{
+    font-size: 15px;
+    margin: 1em;
+    color: gray;
+}
+
+.right{
+    flex: 1;
+    margin: 1em;
+}
+
+.right h1{
+    font-size: 25px;
+    margin: 1em;
+}
+
+.right p{
+    font-size: 15px;
+    margin: 1em;
+    color: gray;
+}
