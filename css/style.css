@@ -24,14 +24,20 @@ body{
     color: white;
 }
 
-.tsa-logo{
-    margin-left: 15px;
+.thor-logo{
     display: flex;
     align-items: center;
+    font-size: 2em;
+    color: white;
 }
 
-.tsa-logo img{
+.thor-logo img{
     height:50px;
+}
+
+.thor-logo:hover{
+    color: gray;
+    text-decoration: none;
 }
 
 .jchs-logo:hover{
