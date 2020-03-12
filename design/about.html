@@ -5,33 +5,110 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About Thor</title>
+        <title>Thor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        
     </head>
 
-    <body>
-        <header>
-            <h1>THOR</h1>
+    <body class="thor-body">
+        
+     
+        <header class="thor-header">
+            <a href="index.html" class ="jchs-logo">
+                <img src="../images/school-logo.png" alt="logo">
+                <div class="jchs-logo-text">Thor</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="safety.html">Safety</a></li>
+                    
+                    
+                    <li>
+                        <div class="icon" onclick="openNav(this)">
+                            <div class="ham1"></div>
+                            <div class="ham2"></div>
+                            <div class="ham3"></div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </nav>
         </header>
 
-        <h1>About</h1>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../design/index.html">Design Brief</a>
+            <a href="../chapter/index.html">TSA Chapter</a>
+            <a href="../school/index.html">CTE Program</a>
+            <a href="/">Home</a>
 
-        <h1>Electric Cars</h1>
+          </div>
 
-        <p>Being some of the most revolutionary products created in the 21st century, electric cars are a category of vehicles that run primarily on the power of energy to carry out functions. By replacing gasoline, these vehicles are minimizing the danger caused by the emission of harmful gases by standard cars and limit worldwide consumption of the quickly disappearing oil reserves.
-            Increase energy security, improve fuel economy, lower fuel costs, and reduce emissions.
-        </p>
+        <script>
 
-        <h1>History</h1>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginRight = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
 
-        <p>Our founder Jón Dottir founded THOR in 2003 when he noticed the harm that cars running on fossil fuels were pushing onto the environment. He himself noted the problems and limited himself to bicycles and public transportation, but then realized that the change had to be on a large scale. Thus came THOR, one of the most popular and powerful electric cars to reach the worldwide market.
-        </p>
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginRight = "0";
+            }
 
-        <h1>Bio</h1>
+            // On Scroll
+            $(window).scroll(function(){
+                // If we have scrolled more than 10px
+                if($(document).scrollTop() > 10){
+                    // Add class "fixed" to header element
+                    $('header').addClass('fixed');
+                // Otherwise
+                }else{
+                    // If header already has "fixed" class
+                    if($('header').hasClass('fixed')){
+                        // Remove said class
+                        $('header').removeClass('fixed');
+                    }
+                }
+            });
+        </script>
 
-        <p>THOR specializes in three types of cars: smár, Mikill, and ǫflugr. Though the amount of models seems limited, each design has its own unique characteristics which can reach the needs of any type of owner in the world. With the small but fast sedans to the powerful trucks, THOR cars are some of the best in the electric car business. With Dottir’s goal of a world without gasoline, THOR and its millions of employees are taking the world by storm.</p>
+        <h1 class="thor-heading">About:</h1>
 
-        <footer>Johns Creek High School 2020 Webmasters Team</footer>
+
+        <div class="thor-info">
+            <h1>Electric Cars</h1>
+            <p>Being some of the most revolutionary products created in the 21st century, electric cars are a category of vehicles that run primarily on the power of energy to carry out functions. By replacing gasoline, these vehicles are minimizing the danger caused by the emission of harmful gases by standard cars and limit worldwide consumption of the quickly disappearing oil reserves.
+                Increase energy security, improve fuel economy, lower fuel costs, and reduce emissions.</p>
+        </div>
+
+        <div class="thor-info">
+            <h1>History</h1>
+            <p>Our founder Jón Dottir founded THOR in 2003 when he noticed the harm that cars running on fossil fuels were pushing onto the environment. He himself noted the problems and limited himself to bicycles and public transportation, but then realized that the change had to be on a large scale. Thus came THOR, one of the most popular and powerful electric cars to reach the worldwide market.</p>
+        </div>
+
+        <div class="thor-info">
+            <h1>Bio</h1>
+            <p>THOR specializes in three types of cars: smár, Mikill, and ǫflugr. Though the amount of models seems limited, each design has its own unique characteristics which can reach the needs of any type of owner in the world. With the small but fast sedans to the powerful trucks, THOR cars are some of the best in the electric car business. With Dottir’s goal of a world without gasoline, THOR and its millions of employees are taking the world by storm.
+
+            </p>
+        </div>
+
+        <footer class="main-footer">Johns Creek High School 2020 Webmasters Team</footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 
     </body>
     
 </html>
+       

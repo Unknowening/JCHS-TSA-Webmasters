@@ -7,9 +7,15 @@ body{
     margin: 0;
     background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    color: white;
 }
+
+.thor-body{
+    padding: 0;
+    margin: 0;
+    background-color: #373737;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 .jchs-logo{
     display: flex;
@@ -68,6 +74,14 @@ body{
     background-color: #580000;
 }
 
+.thor-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #005189;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -113,6 +127,24 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.car-title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 5em;
+    transform: translate(-50%, -50%);
+}
+
+.car-button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-size: 15px;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+    background-color: #005189;
+}
+
 .main-header.fixed{
     position:fixed;
     top:0;
@@ -127,10 +159,51 @@ body{
     
 } 
 
+.thor-header.fixed{
+    position:fixed;
+    top:0;
+    z-index:100;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #005189;
+    width: 100%;
+    
+} 
+
 .main-info{
     color: black;
     text-align: center;
     margin: 10em;
+}
+
+.thor-info{
+    color: white;
+    text-align: center;
+    margin: 5em;
+}
+
+.thor-info h1{
+    font-size: 50px;
+}
+
+.thor-heading{
+    color: white;
+    text-align: center;
+    margin: 2em;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.thor-info p{
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 2em;
+    margin-bottom: 10em;
+    color: lightgray;
+    text-align: center;
 }
 
 .main-info h1{
@@ -146,6 +219,18 @@ body{
 }
 
 .main-footer{
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    height: 75px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    background-color: #005189;
+}
+
+.thor-footer{
     display: flex;
     align-items: center;
     font-size: 1.5em;
@@ -283,3 +368,135 @@ p.small{
     margin: 1em;
     color: gray;
 }
+
+/* Slideshow container */
+.cars-slideshow {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+
+  }
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 50px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    color: white;
+    background-color: #111;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=text]:placeholder-shown{
+      color: white;
+  }
+  
+  input[type=submit] {
+    background-color: #005189;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #002f53;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-right: 5em;
+    padding-left: 5em;
+    padding-bottom: 7em;
+    align-items: center;
+  }
+
+  .thor-text{
+      color: white;
+  }
+
+  .popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    align-items: center;
+  }
+  
+  /* Modal Content/Box */
+  .popup-content {
+    background-color: White;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
